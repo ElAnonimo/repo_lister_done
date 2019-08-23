@@ -9,23 +9,23 @@ import {IRepo} from 'types';
 import {Row, Col} from 'react-bootstrap';
 
 export const Repos: React.FC = () => {
-    const [serchText, setSerchText] = useState('');
+    const [searchText, setSearchText] = useState('');
     const [openRepoId, setOpenRepoId] = useState(0);
     const repos = useSelector(({repo}: AppState) => repo.list);
     const branches = useSelector(({branch}: AppState) => branch.list);
     const dispatch = useDispatch();
 
     const handleChange = (text: string) => {
-        if(!serchText) {
+        if(!searchText) {
             dispatch(resetRepos());
         }
 
-        setSerchText(text);
+        setSearchText(text);
     };
 
     const handleSubmit = () => {
-        if (serchText) {
-            dispatch(loadRepos(serchText));
+        if (searchText) {
+            dispatch(loadRepos(searchText));
         };
     };
 
@@ -45,7 +45,7 @@ export const Repos: React.FC = () => {
             <Row>
                 <Col>
                     <Search 
-                        value={serchText}
+                        value={searchText}
                         onChange={handleChange}
                         onSubmit={handleSubmit}
                     />

@@ -1,4 +1,3 @@
-
 import { SET_BRANCHES } from './types';
 import { Dispatch } from 'redux';
 import {getRepoBranches} from '../api/github';
