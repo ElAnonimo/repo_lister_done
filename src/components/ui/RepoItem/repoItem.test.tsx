@@ -21,7 +21,7 @@ it('should run without failure with empty params', () => {
     expect(repoItem.find('tbody').children()).toHaveLength(0);
 });
 
-it('should call onClick collback on button click', () => {
+it('should call onClick callback on button click', () => {
     const repo = { 
         id: 2,
         name: '',
