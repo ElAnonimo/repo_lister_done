@@ -1,5 +1,5 @@
 import React from 'react';
-import {IRepo, IBranch} from 'types';
+import { IRepo, IBranch } from 'types';
 import styles from './index.module.css';
 import BranchList from '../BranchList';
 import { Button, Image } from 'react-bootstrap';
@@ -10,7 +10,7 @@ export interface IProps {
     onClick: (repo: IRepo) => void,
   }
 
-const RepoItem: React.FC<IProps> = ({repo, branches, onClick}) => (
+const RepoItem: React.FC<IProps> = ({ repo, branches, onClick }) => (
     <React.Fragment>
         <tr>
             <td>
@@ -28,7 +28,7 @@ const RepoItem: React.FC<IProps> = ({repo, branches, onClick}) => (
         {Boolean(branches.length) && (
             <tr>
                 <td colSpan={3}>
-                    <BranchList branches={branches}/>
+                    <BranchList branches={branches} />
                 </td>
             </tr>
         )}

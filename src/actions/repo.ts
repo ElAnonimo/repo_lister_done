@@ -1,7 +1,7 @@
 import { SET_REPOS } from './types';
 import { Dispatch } from 'redux';
-import {getReposBySearch} from '../api/github';
-import {setError} from './error';
+import { getReposBySearch } from '../api/github';
+import { setError } from './error';
 
 export const loadRepos = (query: string) => async (dispatch: Dispatch) => {
   try {

@@ -1,4 +1,3 @@
-
 import { SET_ERROR } from './types';
 
 export const setError = (message: string) => ({

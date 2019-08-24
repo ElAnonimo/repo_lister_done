@@ -1,7 +1,7 @@
 import { SET_BRANCHES } from './types';
 import { Dispatch } from 'redux';
-import {getRepoBranches} from '../api/github';
-import {setError} from './error';
+import { getRepoBranches } from '../api/github';
+import { setError } from './error';
 
 export const loadBranches = (url: string) => async (dispatch: Dispatch) => {
     try {

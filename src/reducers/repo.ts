@@ -1,6 +1,6 @@
-import { SET_REPOS } from "../actions/types";
+import { SET_REPOS } from '../actions/types';
 import { Action, Reducer } from 'redux';
-import {IRepo} from 'types';
+import { IRepo } from 'types';
 
 export interface IRepoState {
   readonly list: IRepo[]

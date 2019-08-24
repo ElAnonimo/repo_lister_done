@@ -1,6 +1,6 @@
-import { SET_BRANCHES } from "../actions/types";
+import { SET_BRANCHES } from '../actions/types';
 import { Action, Reducer } from 'redux';
-import {IBranch} from 'types';
+import { IBranch } from 'types';
 
 export interface IRepoBrancheState {
   readonly list: IBranch[]

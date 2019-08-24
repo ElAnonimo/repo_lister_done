@@ -9,7 +9,7 @@ const KEY_CODE_ENTER = 13;
 
 it('should run without failure with empty params', () => {
   const search = Enzyme.shallow(
-     <Search value="" onChange={(value) => {}} onSubmit={() => {}}/>
+     <Search value="" onChange={(value) => {}} onSubmit={() => {}} />
   );
 });
 
@@ -17,19 +17,19 @@ it('should put value inside of search field', () => {
     const value = 'abracadabra';
 
     const search = Enzyme.shallow(
-        <Search value={value} onChange={(value) => {}} onSubmit={() => {}}/>
+        <Search value={value} onChange={(value) => {}} onSubmit={() => {}} />
     );
 
     expect(search.find('FormControl').props().value).toBe(value);    
 });
 
-it('should call onChange collback when input is changed', () => {
+it('should call onChange callback when input is changed', () => {
     const value = 'abracadabra';
     const inputLeter = 'a';
     const valueAfterInput = `${value}${inputLeter}`;
     const mockOnChange = jest.fn();
     const search = Enzyme.shallow(
-        <Search value={value} onChange={mockOnChange} onSubmit={() => {}}/>
+        <Search value={value} onChange={mockOnChange} onSubmit={() => {}} />
     );
 
     const input = search.find('FormControl');
@@ -39,11 +39,11 @@ it('should call onChange collback when input is changed', () => {
     expect(mockOnChange.mock.calls.length).toBe(1);
 });
 
-it('should call onSubmit collback on Enter key', () => {
+it('should call onSubmit callback on Enter key', () => {
     const value = 'abracadabra';
     const mockOnSubmit = jest.fn();
     const search = Enzyme.shallow(
-        <Search value={value} onChange={jest.fn()} onSubmit={mockOnSubmit}/>
+        <Search value={value} onChange={jest.fn()} onSubmit={mockOnSubmit} />
     );
 
     const input = search.find('FormControl');

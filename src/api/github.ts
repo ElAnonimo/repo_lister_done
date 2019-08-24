@@ -1,4 +1,4 @@
-import { IBranch, IRepo } from "types";
+import { IBranch, IRepo } from 'types';
 
 const DEFAULT_PER_PAGE = 5;
 const SLICE_FROM_THE_END_CHAPTERS = 9;

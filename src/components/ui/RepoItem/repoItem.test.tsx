@@ -15,7 +15,7 @@ it('should run without failure with empty params', () => {
         }
     };
     const repoItem = Enzyme.shallow(
-        <RepoItem repo={repo} branches={[]} onClick={()=> {}}/>
+        <RepoItem repo={repo} branches={[]} onClick={() => {}} />
     );
 
     expect(repoItem.find('tbody').children()).toHaveLength(0);
@@ -34,7 +34,7 @@ it('should call onClick collback on button click', () => {
 
     const mockOnClick = jest.fn();
     const repoItem = Enzyme.shallow(
-        <RepoItem repo={repo} branches={[]} onClick={mockOnClick}/>
+        <RepoItem repo={repo} branches={[]} onClick={mockOnClick} />
     );
 
     const input = repoItem.find('Button');

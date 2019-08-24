@@ -10,7 +10,7 @@ export interface IProps {
   placeholder?: string,
 }
 
-const Search: React.FC<IProps> = ({value, onChange, onSubmit, placeholder}) => {
+const Search: React.FC<IProps> = ({ value, onChange, onSubmit, placeholder }) => {
   const handleKeyPressed = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.keyCode === KEY_CODE_ENTER) {
       event.preventDefault();
@@ -26,7 +26,7 @@ const Search: React.FC<IProps> = ({value, onChange, onSubmit, placeholder}) => {
 
   return (
     <InputGroup
-     className="mb-3"        
+     className='mb-3'
     >
       <FormControl
         placeholder={searchPlaceholder}

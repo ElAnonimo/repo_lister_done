@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import Search from '../../ui/Search';
 import RepoList from '../../ui/RepoList';
-import { useDispatch, useSelector } from "react-redux";
-import {AppState} from '../../../reducers/index';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppState } from '../../../reducers/index';
 import { loadRepos, resetRepos } from '../../../actions/repo';
 import { loadBranches } from '../../../actions/branch';
-import {IRepo} from 'types';
-import {Row, Col} from 'react-bootstrap';
+import { IRepo } from 'types';
+import { Row, Col } from 'react-bootstrap';
 
 export const Repos: React.FC = () => {
     const [searchText, setSearchText] = useState('');
     const [openRepoId, setOpenRepoId] = useState(0);
-    const repos = useSelector(({repo}: AppState) => repo.list);
-    const branches = useSelector(({branch}: AppState) => branch.list);
+    const repos = useSelector(({ repo }: AppState) => repo.list);
+    const branches = useSelector(({ branch }: AppState) => branch.list);
     const dispatch = useDispatch();
 
     const handleChange = (text: string) => {
-        if(!searchText) {
+        if (!searchText) {
             dispatch(resetRepos());
         }
 
